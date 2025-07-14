@@ -1,0 +1,19 @@
+{
+  "name": "bug-bounty-community",
+  "version": "1.0.0",
+  "description": "A community hub for bug bounty hunters.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bug-bounty",
+    "security",
+    "community"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/rest": "^20.0.1"
+  }
+}

@@ -79,22 +79,62 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('review-form');
     const reviewsContainer = document.getElementById('reviews-container');
 
-    form.addEventListener('submit', (e) => {
+    const displayReviews = (reviews) => {
+        reviewsContainer.innerHTML = '';
+        for (const review of reviews) {
+            const reviewCard = document.createElement('div');
+            reviewCard.classList.add('review-card');
+            reviewCard.innerHTML = `
+                <h3>${review.name}</h3>
+                <p>${review.approach}</p>
+            `;
+            reviewsContainer.appendChild(reviewCard);
+        }
+    };
+
+    const fetchReviews = async () => {
+        try {
+            const response = await fetch('reviews.json');
+            const reviews = await response.json();
+            displayReviews(reviews);
+        } catch (error) {
+            console.error('Error fetching reviews:', error);
+        }
+    };
+
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const name = document.getElementById('name').value;
         const approach = document.getElementById('approach').value;
+        const submitBtn = form.querySelector('.submit-btn');
 
-        const reviewCard = document.createElement('div');
-        reviewCard.classList.add('review-card');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
 
-        reviewCard.innerHTML = `
-            <h3>${name}</h3>
-            <p>${approach}</p>
-        `;
+        try {
+            const response = await fetch('/api/add-review', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, approach }),
+            });
 
-        reviewsContainer.prepend(reviewCard);
-
-        form.reset();
+            if (response.ok) {
+                form.reset();
+                fetchReviews();
+            } else {
+                alert('Error submitting review. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error submitting review:', error);
+            alert('Error submitting review. Please try again.');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit';
+        }
     });
+
+    fetchReviews();
 });
