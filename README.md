@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnU4eDIxbTQzaDY4NTZsOGQ4OGE0bWtwdWxkdTZvdXQ3cW1yOWY3ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/axnFGXT6MzvgY/giphy.gif" alt="Bug Bounty Methodology Banner">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnU4eDIxbTQzaDY4NTZsOGQ4OGE0bWtwdWxkdTZvdXQ3cW1yOWY3ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/axnFGXT6MzvgY/giphy.gif" alt="Bug Bounty Methodology Banner" width="800">
   <h1>Bug Bounty Methodology</h1>
   <p>A community-driven guide to bug bounty hunting.</p>
   
@@ -167,7 +167,7 @@ We welcome contributions! If you have suggestions for improving this methodology
 This project uses a unique, automated system for handling reviews, powered by GitHub Actions:
 
 <div align="center">
-  <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" alt="Review Submission Workflow GIF" width="600">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTFpamVnNmsya2Y1ZHh1bGUzbWNoNzB0Z2oxcGxjanMwa2Q4Z2hxZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QtjhwhUYHOefY9ePkK/giphy.gif" alt="Review Submission Workflow GIF" width="600">
 </div>
 
 1.  **Submit a Review**: When you submit a review on the website, it will open a new issue in this GitHub repository with your review pre-filled.
