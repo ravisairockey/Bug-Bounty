@@ -1,4 +1,14 @@
-# Bug Bounty Methodology
+<div align="center">
+  <img src="https://raw.githubusercontent.com/ravisairockey/Bug-Bounty/main/assets/banner.png" alt="Bug Bounty Methodology Banner">
+  <h1>Bug Bounty Methodology</h1>
+  <p>A community-driven guide to bug bounty hunting.</p>
+  
+  <p>
+    <img src="https://img.shields.io/github/issues/ravisairockey/Bug-Bounty?style=for-the-badge&logo=github" alt="GitHub issues">
+    <img src="https://img.shields.io/github/forks/ravisairockey/Bug-Bounty?style=for-the-badge&logo=github" alt="GitHub forks">
+    <img src="https://img.shields.io/github/stars/ravisairockey/Bug-Bounty?style=for-the-badge&logo=github" alt="GitHub stars">
+  </p>
+</div>
 
 This repository provides a comprehensive methodology for bug bounty hunting, designed to guide beginners through the process of finding and reporting vulnerabilities. The methodology is broken down into several key stages, from initial reconnaissance to vulnerability scanning and analysis.
 
@@ -152,12 +162,18 @@ cat jsfiles.txt | while read url; do python3 /secretfinder.py -i $url -o cli >> 
 
 We welcome contributions! If you have suggestions for improving this methodology or want to add new techniques, you can submit them through the form on our community website.
 
-This project uses a unique, automated system for handling reviews:
+### How It Works
 
-1.  When you submit a review on the website, it will open a new issue in this GitHub repository with your review pre-filled.
-2.  Simply click "Submit new issue" to add your review.
-3.  A GitHub Action will automatically detect the new issue, add your review to the `reviews.json` file, and commit the change to the repository.
-4.  Your review will then appear on the website for everyone to see.
+This project uses a unique, automated system for handling reviews, powered by GitHub Actions:
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/ravisairockey/Bug-Bounty/main/assets/workflow.gif" alt="Review Submission Workflow GIF" width="600">
+</div>
+
+1.  **Submit a Review**: When you submit a review on the website, it will open a new issue in this GitHub repository with your review pre-filled.
+2.  **Create the Issue**: Simply click "Submit new issue" to add your review.
+3.  **Automated Update**: A GitHub Action will automatically detect the new issue, add your review to the `reviews.json` file, and commit the change to the repository.
+4.  **See it Live**: Your review will then appear on the website for everyone to see.
 
 If you'd like to contribute in other ways, please feel free to open an issue or submit a pull request.
 
