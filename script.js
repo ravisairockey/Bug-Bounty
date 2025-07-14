@@ -102,38 +102,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', (e) => {
         e.preventDefault();
 
         const name = document.getElementById('name').value;
         const approach = document.getElementById('approach').value;
-        const submitBtn = form.querySelector('.submit-btn');
 
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Submitting...';
+        const repoUrl = 'https://github.com/ravisairockey/Bug-Bounty';
+        const issueTitle = encodeURIComponent(name);
+        const issueBody = encodeURIComponent(approach);
 
-        try {
-            const response = await fetch('/api/add-review', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ name, approach }),
-            });
+        const newIssueUrl = `${repoUrl}/issues/new?title=${issueTitle}&body=${issueBody}`;
 
-            if (response.ok) {
-                form.reset();
-                fetchReviews();
-            } else {
-                alert('Error submitting review. Please try again.');
-            }
-        } catch (error) {
-            console.error('Error submitting review:', error);
-            alert('Error submitting review. Please try again.');
-        } finally {
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Submit';
-        }
+        window.open(newIssueUrl, '_blank');
+        form.reset();
     });
 
     fetchReviews();

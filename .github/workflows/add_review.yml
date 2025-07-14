@@ -1,0 +1,36 @@
+name: Add Review to JSON
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  add-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Get issue data
+        id: get_issue_data
+        run: |
+          title="${{ github.event.issue.title }}"
+          body="${{ github.event.issue.body }}"
+          echo "::set-output name=name::$title"
+          echo "::set-output name=approach::$body"
+
+      - name: Update reviews.json
+        run: |
+          jq --arg name "${{ steps.get_issue_data.outputs.name }}" \
+             --arg approach "${{ steps.get_issue_data.outputs.approach }}" \
+             --argjson date "$(date +%s)000" \
+             '. | [{name: $name, approach: $approach, date: ($date | tonumber | todateiso8601)}] + .' \
+             reviews.json > tmp.json && mv tmp.json reviews.json
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add reviews.json
+          git commit -m "Add review from issue #${{ github.event.issue.number }}" || exit 0
+          git push

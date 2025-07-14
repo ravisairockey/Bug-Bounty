@@ -148,9 +148,18 @@ cat jsfiles.txt | while read url; do python3 /secretfinder.py -i $url -o cli >> 
 -   **`-o cli`**: Outputs the results to the command line.
 -   **`>> secret.txt`**: Appends the found secrets to `secret.txt`.
 
-## Contributing
+## Contributing & Submitting Reviews
 
-We welcome contributions! If you have suggestions for improving this methodology or want to add new techniques, please feel free to open an issue or submit a pull request.
+We welcome contributions! If you have suggestions for improving this methodology or want to add new techniques, you can submit them through the form on our community website.
+
+This project uses a unique, automated system for handling reviews:
+
+1.  When you submit a review on the website, it will open a new issue in this GitHub repository with your review pre-filled.
+2.  Simply click "Submit new issue" to add your review.
+3.  A GitHub Action will automatically detect the new issue, add your review to the `reviews.json` file, and commit the change to the repository.
+4.  Your review will then appear on the website for everyone to see.
+
+If you'd like to contribute in other ways, please feel free to open an issue or submit a pull request.
 
 ## Disclaimer
 
