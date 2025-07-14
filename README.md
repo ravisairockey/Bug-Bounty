@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" alt="Bug Bounty Methodology Banner">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnU4eDIxbTQzaDY4NTZsOGQ4OGE0bWtwdWxkdTZvdXQ3cW1yOWY3ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/axnFGXT6MzvgY/giphy.gif" alt="Bug Bounty Methodology Banner">
   <h1>Bug Bounty Methodology</h1>
   <p>A community-driven guide to bug bounty hunting.</p>
   
