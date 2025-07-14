@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Bounty Community</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="background-canvas"></canvas>
+    <div class="container">
+        <header>
+            <h1>Bug Bounty Community Hub</h1>
+            <p>Share your knowledge, techniques, and findings with the community.</p>
+        </header>
+        <main>
+            <section class="form-section">
+                <h2>Submit Your Approach</h2>
+                <form id="review-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="approach">Your Method/Suggestion</label>
+                        <textarea id="approach" name="approach" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </section>
+            <section class="reviews-section">
+                <h2>Community Submissions</h2>
+                <div id="reviews-container">
+                    <!-- Submissions will be dynamically added here -->
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Bug Bounty Community. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
