@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/ravisairockey/Bug-Bounty/main/assets/banner.png" alt="Bug Bounty Methodology Banner">
+  <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" alt="Bug Bounty Methodology Banner">
   <h1>Bug Bounty Methodology</h1>
   <p>A community-driven guide to bug bounty hunting.</p>
   
@@ -167,7 +167,7 @@ We welcome contributions! If you have suggestions for improving this methodology
 This project uses a unique, automated system for handling reviews, powered by GitHub Actions:
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/ravisairockey/Bug-Bounty/main/assets/workflow.gif" alt="Review Submission Workflow GIF" width="600">
+  <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" alt="Review Submission Workflow GIF" width="600">
 </div>
 
 1.  **Submit a Review**: When you submit a review on the website, it will open a new issue in this GitHub repository with your review pre-filled.
